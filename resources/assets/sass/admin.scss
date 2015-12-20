@@ -1,0 +1,91 @@
+@import "./bootstrap-variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/simditor/styles/simditor.scss";
+@import "./sbadmin";
+
+html,
+body {
+    height: 100%;
+}
+
+#wrapper {
+    height: calc(100% - 51px);
+}
+
+#page-wrapper {
+    padding-top: 20px;
+    min-height: 100%;
+}
+
+h3.panel-title {
+    line-height: 30px;
+}
+
+.panel-footer .pagination {
+    margin: 0;
+}
+
+.alert-container {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: 1001;
+    height: 33px;
+    line-height: 33px;
+
+    .alert-fixed {
+        display: inline;
+        padding: 10px;
+    }
+
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+
+    input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+
+}
+
+.list-uploader > div {
+    width: 33.33%;
+    float: left;
+    padding: 5px;
+    position: relative;
+}
+
+.list-uploader > li > i.fa-trash,
+.list-uploader > div > i.fa-trash {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+}
+
+.list-uploader > li:hover i.fa-trash,
+.list-uploader > div:hover i.fa-trash {
+    display: block;
+}

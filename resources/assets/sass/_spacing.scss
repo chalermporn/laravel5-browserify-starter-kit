@@ -1,0 +1,55 @@
+$values-spacing:  (0 5 10 15 20 25 30 40 50 60 70 80 90 100);
+
+@mixin generate-spacing($values) {
+    // Margin all
+    @each $val in $values{
+        .mg-#{$val}{
+            margin: #{$val}px !important;
+        }
+        .pd-#{$val}{
+            padding: #{$val}px !important;
+        }
+    }
+    // Margin top, bottom and vertical
+    @each $val in $values {
+        .mt-#{$val},
+        .mv-#{$val}{
+            margin-top: #{$val}px !important;
+        }
+        .mb-#{$val},
+        .mv-#{$val}{
+            margin-bottom: #{$val}px !important;
+        }
+        .pt-#{$val},
+        .pv-#{$val}{
+            padding-top: #{$val}px !important;
+        }
+        .pb-#{$val},
+        .pv-#{$val}{
+            padding-bottom: #{$val}px !important;
+        }
+    }
+    // Margin left, right and horizontal
+    @each $val in $values {
+        .ml-#{$val},
+        .mh-#{$val}{
+            margin-left: #{$val}px !important;
+        }
+        .mr-#{$val},
+        .mh-#{$val}{
+            margin-right: #{$val}px !important;
+        }
+        .pl-#{$val},
+        .ph-#{$val}{
+            padding-left: #{$val}px !important;
+        }
+        .pr-#{$val},
+        .ph-#{$val}{
+            padding-right: #{$val}px !important;
+        }
+    }
+}
+
+@include generate-spacing($values-spacing);
+
+
